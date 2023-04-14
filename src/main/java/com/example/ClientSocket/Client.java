@@ -23,7 +23,7 @@ public class Client {
     private ObjectMapper objectMapper;
 
     public Client() {
-        String hostName = "localhost"; // or IP address of the server
+        String hostName = "192.168.0.150"; // or IP address of the server
         int portNumber = 12345; // the port number on which the server is listening
         this.objectMapper = new ObjectMapper();
 
@@ -105,6 +105,7 @@ public class Client {
                     .append("<br />")
                     .append("<br />");
         }
+        sb.append(m2.getErrorMessage());
         return sb;
     }
 }
